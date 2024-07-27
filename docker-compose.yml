@@ -14,10 +14,4 @@ services:
       - /mnt/WD2:/WD2
     network_mode: "host"
     restart: "unless-stopped"
-    #    environment:
     env_file: ./keys.env
-      #- HOMEPAGE_TAILSCALE_KEY=${TAILSCALE_KEY}
-      #- HOMEPAGE_JELLYFIN_KEY=${JELLYFIN_KEY}
-      #- HOMEPAGE_PIHOLE_KEY=${PIHOLE_KEY}
-      #- HOMEPAGE_LAT=${LAT}
-      #- HOMEPAGE_LON=${LON}
