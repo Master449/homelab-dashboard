@@ -2,11 +2,26 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/service-widgets
 
-- resources:
-    cpu: true
-    memory: true
-    disk: /
+- openmeteo:
+    label: Home
+    latitude: {{HOMEPAGE_VAR_LAT}}
+    longitude: {{HOMEPAGE_VAR_LON}}
+    timezone: America/Chicago
+    units: imperial
+    cache: 60
 
-- search:
-    provider: duckduckgo
-    target: _blank
+- resources:
+    label: System
+    cpu: true
+    cputemp: true
+    memory: true
+
+- resources:
+    label: Vault
+    disk:
+      - /WD1
+
+- resources:
+    label: Backup
+    disk:
+      - /WD2

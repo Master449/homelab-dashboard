@@ -1,6 +1,9 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/settings
+title: Flowers Dashboard
+cardBlur: sm
+statusStyle: "dot"
 
 providers:
   openweathermap: openweathermapapikey

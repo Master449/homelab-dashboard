@@ -2,17 +2,79 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+- Services:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://jellyfin.homelab.local
+        description: Jellyfin Media Server
+        ping: http://192.168.5.246:8096
+        widget:
+            type: jellyfin
+            url: http://localhost:8096
+            key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
+            enableBlocks: true
+            enableUser: true
+            enableNowPlaying: false
+    - Reolink:
+        icon: /icons/reolink.png
+        href: http://192.168.5.247
+        description: NVR PoE Camera System
+        ping: http://192.168.5.247
+        widget: 
+          type: customapi
+          url: http://127.0.0.1:1200/api
+          refreshInterval: 300000
+          method: GET
+          mappings:
+            - field:
+                cameras: garage
+              remap:
+                - value: 1
+                  to: ONLINE
+                - value: 0
+                  to: OFFLINE
+              label: Garage Camera
+            - field:
+                cameras: house
+              remap:
+                - value: 1
+                  to: ONLINE
+                - value: 0
+                  to: OFFLINE
+              label: House Camera
+            - field: disk
+              label: Free Space
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
-
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
+- Administration:
+    - PiHole:
+        icon: /icons/pihole.png
+        description: Network Wide DNS Ad and Telemetry blocker
+        href: http://192.168.5.205/admin/index.php
+        ping: http://192.168.5.205/
+        widget:
+          type: pihole
+          url: http://192.168.5.205/
+          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        description: Uptime Monitor
+        href: http://uptime.homelab.local
+        #ping: http://192.168.5.214:7000
+        # widget:
+        #  type: uptimekuma
+        #  url: http://uptime.homelab.local
+        #  slug: services
+          
+- Tailscales:
+    - This Machine:
+        icon: tailscale.png
+        widget:
+            type: tailscale
+            deviceid: n7JCzBGNnr11CNTRL
+            key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}
+    - Davids Machine:
+        icon: tailscale.png
+        widget:
+            type: tailscale
+            deviceid: nrah1fy3v811CNTRL
+            key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}

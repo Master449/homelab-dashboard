@@ -5,3 +5,23 @@
 [2024-07-27T20:56:45.204Z] info: custom.css was copied to the config folder
 [2024-07-27T20:56:45.204Z] info: custom.js was copied to the config folder
 [2024-07-27T20:56:45.283Z] info: kubernetes.yaml was copied to the config folder
+[2024-07-27T21:04:59.679Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:04:59.685Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:06:51.744Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:06:51.746Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:06:52.067Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:06:52.075Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:09:34.533Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:09:34.545Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:10:16.560Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:10:16.562Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:10:16.868Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:10:16.875Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:12:05.227Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:12:05.580Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:13:05.537Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:13:05.540Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:13:05.895Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
+[2024-07-27T21:13:05.918Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:14:19.047Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/nrah1fy3v811CNTRL
+[2024-07-27T21:14:19.057Z] error: <credentialedProxyHandler> HTTP Error 401 calling https://api.tailscale.com/api/v2/device/n7JCzBGNnr11CNTRL
