@@ -15,4 +15,6 @@ services:
     network_mode: "host"
     restart: "unless-stopped"
     environment:
-      - API_KEY=${API_KEY}
+      - HOMEPAGE_TAILSCALE_KEY=${TAILSCALE_KEY}
+      - HOMEPAGE_JELLYFIN_KEY=${JELLYFIN_KEY}
+      - HOMEPAGE_PIHOLE_KEY=${PIHOLE_KEY}
