@@ -59,6 +59,11 @@
         icon: uptime-kuma.png
         description: Uptime Monitor
         href: http://uptime.homelab.local
+        ping: http://localhost:7000
+        widget:
+          type: uptimekuma
+          url: http://localhost:7000
+          slug: all
     - Speedtest Tracker:
         icon: speedtest-tracker.png
         description: Measures DL/UL
