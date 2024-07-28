@@ -7,7 +7,7 @@
         icon: jellyfin.png
         href: http://jellyfin.homelab.local
         description: Jellyfin Media Server
-        ping: http://192.168.5.246:8096
+        siteMonitor: http://192.168.5.246:8096
         widget:
             type: jellyfin
             url: http://localhost:8096
@@ -88,3 +88,20 @@
             type: tailscale
             deviceid: nrah1fy3v811CNTRL
             key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}
+
+- Glances:
+    - CPU Usage:
+        widget:
+          type: glances
+          url: http://localhost:61208
+          metric: cpu
+    - Memory Usage:
+        widget:
+          type: glances
+          url: http://localhost:61208
+          metric: memory
+    - GPU Usage:
+        widget:
+          type: glances
+          url: http://localhost:61208
+          metric: gpu:0

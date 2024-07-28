@@ -10,18 +10,31 @@
     units: imperial
     cache: 60
 
-- resources:
-    label: System
+#- resources:
+    #label: System
+    #cpu: true
+    #cputemp: true
+    #memory: true
+
+#- resources:
+    #label: Vault
+    #disk:
+    #  - /WD1
+
+#- resources:
+    #label: Backup
+    #disk:
+    #  - /WD2
+
+- glances:
+    url: http://localhost:61208
     cpu: true
-    cputemp: true
-    memory: true
-
-- resources:
-    label: Vault
+    mem: true
+    cputemp: true 
+    uptime: true
     disk:
-      - /WD1
-
-- resources:
-    label: Backup
-    disk:
-      - /WD2
+      - /mnt/WD1
+      - /mnt/WD2
+    diskUnits: bytes 
+    expanded: false
+    label: Homelab
