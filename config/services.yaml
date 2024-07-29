@@ -7,7 +7,7 @@
         icon: jellyfin.png
         href: http://jellyfin.homelab.local
         description: Jellyfin Media Server
-        siteMonitor: http://192.168.5.246:8096
+        siteMonitor: http://192.168.0.109:8096
         widget:
             type: jellyfin
             url: http://localhost:8096
@@ -17,9 +17,9 @@
             enableNowPlaying: false
     - Reolink:
         icon: /icons/reolink.png
-        href: http://192.168.5.247
+        href: http://192.168.0.147
         description: NVR PoE Camera System
-        ping: http://192.168.5.247
+        ping: http://192.168.0.147
         widget: 
           type: customapi
           url: http://127.0.0.1:1200/api
@@ -49,11 +49,11 @@
     - PiHole:
         icon: /icons/pihole.png
         description: Network Wide DNS Ad and Telemetry blocker
-        href: http://192.168.5.205/admin/index.php
-        ping: http://192.168.5.205/
+        href: http://192.168.0.127/admin/index.php
+        ping: http://192.168.0.127/
         widget:
           type: pihole
-          url: http://192.168.5.205/
+          url: http://192.168.0.127/
           key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
     - Uptime Kuma:
         icon: uptime-kuma.png
