@@ -7,9 +7,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /home/david/dashboard/config:/app/config
+      - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /home/david/dashboard/icons:/app/public/icons
+      - ./icons:/app/public/icons
       - /mnt/WD1:/WD1
       - /mnt/WD2:/WD2
     network_mode: "host"

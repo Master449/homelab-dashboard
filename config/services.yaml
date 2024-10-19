@@ -2,19 +2,29 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- Services:
+- Media:
     - Jellyfin:
         icon: jellyfin.png
-        href: http://jellyfin.homelab.local
+        href: http://192.168.0.109:8096
         description: Jellyfin Media Server
         siteMonitor: http://192.168.0.109:8096
         widget:
             type: jellyfin
-            url: http://localhost:8096
+            url: http://192.168.0.109:8096
             key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
             enableBlocks: true
             enableUser: true
             enableNowPlaying: false
+    - Transmission:
+        icon: transmission.png
+        description: Torrent Client
+        href: http://torrents.home
+        container: torrent-transmission-openvpn-1
+        widget:
+          type: transmission
+          url: http://torrents.home
+
+- Services:
     - Reolink:
         icon: /icons/reolink.png
         href: http://192.168.0.147
@@ -44,6 +54,17 @@
               label: House Camera
             - field: disk
               label: Free Space
+    - Minecraft Server:
+        icon: minecraft.png
+        description: NixOS Minecraft Server
+        widget:
+          type: minecraft
+          url: udp://192.168.0.109:25565
+    - Bluemap:
+        icon: minecraft.png
+        description: 3D Minecraft Map Plugin
+        href: 192.168.0.109:8100
+        ping: 192.168.0.109:8100
 
 - Administration:
     - PiHole:
@@ -58,8 +79,8 @@
     - Uptime Kuma:
         icon: uptime-kuma.png
         description: Uptime Monitor
-        href: http://uptime.homelab.local
-        ping: http://localhost:7000
+        href: http://uptime.home
+        container: uptime-kuma
         widget:
           type: uptimekuma
           url: http://localhost:7000
@@ -67,41 +88,17 @@
     - Speedtest Tracker:
         icon: speedtest-tracker.png
         description: Measures DL/UL
-        href: http://speedtest.homelab.local
-        ping: http://localhost:4000
+        href: http://speedtest.home
+        container: speedtest-tracker
         widget:
           type: speedtest
           url: http://localhost:4000
-
-
-          
-- Tailscales:
-    - This Machine:
-        icon: tailscale.png
+    - UPS Monitor:
+        icon: network-ups-tools.png
+        description: UPS Monitoring Service
+        href: http://192.168.0.109:6001
+        container: PeaNUT
         widget:
-            type: tailscale
-            deviceid: n7JCzBGNnr11CNTRL
-            key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}
-    - Davids Machine:
-        icon: tailscale.png
-        widget:
-            type: tailscale
-            deviceid: nrah1fy3v811CNTRL
-            key: {{HOMEPAGE_VAR_TAILSCALE_KEY}}
-
-- Glances:
-    - CPU Usage:
-        widget:
-          type: glances
-          url: http://localhost:61208
-          metric: cpu
-    - Memory Usage:
-        widget:
-          type: glances
-          url: http://localhost:61208
-          metric: memory
-    - GPU Usage:
-        widget:
-          type: glances
-          url: http://localhost:61208
-          metric: gpu:0
+          type: peanut
+          url: http://192.168.0.109:6001
+          key: GX1500U

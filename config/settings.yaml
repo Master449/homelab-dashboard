@@ -4,6 +4,12 @@
 title: Flowers Dashboard
 cardBlur: sm
 statusStyle: "dot"
+hideVersion: true
+
+layout:
+  Media:
+    style: row
+    columns: 4
 
 providers:
   openweathermap: openweathermapapikey
