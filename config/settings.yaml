@@ -7,9 +7,9 @@ statusStyle: "dot"
 hideVersion: true
 
 layout:
-  Media:
+  Router:
     style: row
-    columns: 4
+    columns: 1
 
 providers:
   openweathermap: openweathermapapikey

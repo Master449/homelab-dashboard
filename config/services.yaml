@@ -1,35 +1,39 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
-
 - Media:
     - Jellyfin:
         icon: jellyfin.png
-        href: http://192.168.0.109:8096
+        href: http://192.168.1.109:8096
         description: Jellyfin Media Server
-        siteMonitor: http://192.168.0.109:8096
+        siteMonitor: http://192.168.1.109:8096
         widget:
             type: jellyfin
-            url: http://192.168.0.109:8096
+            url: http://192.168.1.109:8096
             key: {{HOMEPAGE_VAR_JELLYFIN_KEY}}
             enableBlocks: true
             enableUser: true
             enableNowPlaying: false
-    - Transmission:
-        icon: transmission.png
+    - qBittorrent:
+        icon: qbittorrent.png
         description: Torrent Client
-        href: http://torrents.home
-        container: torrent-transmission-openvpn-1
+        href: http://192.168.1.109:8080
+        container: qbittorrent
         widget:
-          type: transmission
-          url: http://torrents.home
+          type: qbittorrent
+          url: http://192.168.1.109:8080
+    - FileBrowser:
+        icon: filebrowser.png
+        description: Kind of insecure, only for testing
+        href: http://192.168.1.109:7920
+        siteMonitor: http://192.168.1.109:7920
 
-- Services:
+- Monitoring:
     - Reolink:
         icon: /icons/reolink.png
-        href: http://192.168.0.147
+        href: http://192.168.1.147
         description: NVR PoE Camera System
-        ping: http://192.168.0.147
+        ping: http://192.168.1.147
         widget: 
           type: customapi
           url: http://127.0.0.1:1200/api
@@ -54,28 +58,6 @@
               label: House Camera
             - field: disk
               label: Free Space
-    - Minecraft Server:
-        icon: minecraft.png
-        description: NixOS Minecraft Server
-        widget:
-          type: minecraft
-          url: udp://192.168.0.109:25565
-    - Bluemap:
-        icon: minecraft.png
-        description: 3D Minecraft Map Plugin
-        href: 192.168.0.109:8100
-        ping: 192.168.0.109:8100
-
-- Administration:
-    - PiHole:
-        icon: /icons/pihole.png
-        description: Network Wide DNS Ad and Telemetry blocker
-        href: http://192.168.0.127/admin/index.php
-        ping: http://192.168.0.127/
-        widget:
-          type: pihole
-          url: http://192.168.0.127/
-          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
     - Uptime Kuma:
         icon: uptime-kuma.png
         description: Uptime Monitor
@@ -96,9 +78,52 @@
     - UPS Monitor:
         icon: network-ups-tools.png
         description: UPS Monitoring Service
-        href: http://192.168.0.109:6001
+        href: http://192.168.1.109:6001
         container: PeaNUT
         widget:
           type: peanut
-          url: http://192.168.0.109:6001
+          url: http://192.168.1.109:6001
           key: GX1500U
+    - SMART Data Logging:
+        icon: /icons/scrutiny.png
+        description: Scrutiny
+        href: http://192.168.1.109:8082
+        container: scrutiny
+
+- Games:
+    - Minecraft Server:
+        icon: minecraft.png
+        description: NixOS Minecraft Server
+        container: minecraft-server-mc-1
+        widget:
+          type: minecraft
+          url: udp://192.168.1.109:25565
+    - Bluemap:
+        icon: minecraft.png
+        description: 3D Minecraft Map Plugin
+        href: http://192.168.1.109:8100
+        ping: 192.168.1.109:8100
+
+- Network:
+    - The Backbone:
+        icon: ubiquiti.png
+        description: Ubiquiti Dream Machine Pro
+        href: https://192.168.1.1/network/default/dashboard
+        widget:
+          type: unifi
+          url: https://192.168.1.1
+          username: API
+          password: {{HOMEPAGE_VAR_UNIFI_PASSWORD}}
+    - PiHole:
+        icon: /icons/pihole.png
+        description: Network Wide DNS Ad and Telemetry blocker
+        href: http://192.168.1.232/admin/index.php
+        ping: http://192.168.1.232/
+        widget:
+          type: pihole
+          url: http://192.168.1.232/
+          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+    - Proxmox:
+        icon: proxmox.png
+        href: http://192.168.1.157:8006
+        ping: http://192.168.1.157:8006
